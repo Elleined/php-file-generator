@@ -1,0 +1,16 @@
+{
+    "name": "elleined/php-file-generator",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Elleined\\PhpFileGenerator\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Elleined",
+            "email": "demadegu@gmail.com"
+        }
+    ],
+    "require": {}
+}
