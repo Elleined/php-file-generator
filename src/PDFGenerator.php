@@ -18,14 +18,17 @@ class PDFGenerator implements Generator {
         $fpdf -> SetTitle("Creating sample PDF file.", true);
         $fpdf -> SetKeywords("PHP PDF", true);
 
-        // Document Properties
-        $fpdf -> SetFont("Courier");
-        $fpdf -> SetFontSize(10);
+        
 
         // Document Page Properties
         $fpdf -> AddPage();
         $fpdf -> SetLeftMargin(14);
 
+        $fpdf -> SetFont("Courier", "B", 20);
+        $fpdf -> Cell(25, 10, "Customer Table", 0, 0, "L");
+        $fpdf -> Ln();
+
+        $fpdf -> SetFont("Courier", "", 12);
         foreach ($headers as $header) {
             $fpdf -> Cell(45, 6, $header, 1, 0, "C");
         }
