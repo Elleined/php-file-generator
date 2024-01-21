@@ -18,8 +18,6 @@ class PDFGenerator implements Generator {
         $fpdf -> SetTitle("Creating sample PDF file.", true);
         $fpdf -> SetKeywords("PHP PDF", true);
 
-        
-
         // Document Page Properties
         $fpdf -> AddPage();
         $fpdf -> SetLeftMargin(14);

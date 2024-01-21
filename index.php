@@ -1,7 +1,7 @@
 <?php
 
 use Elleined\PHPFileGenerator\CSVGenerator;
-use Elleined\PHPFileGenerator\EXCELGenerator;
+use Elleined\PHPFileGenerator\ExcelGenerator;
 use Elleined\PHPFileGenerator\PDFGenerator;
 
 require_once "./vendor/autoload.php";
@@ -19,5 +19,8 @@ $data = [
 // $csvGenerator = new CSVGenerator();
 // $csvGenerator -> generate("my_first_generated_csv_file", $headers, $data);
 
-$pdfGenerator = new PDFGenerator();
-$pdfGenerator -> generate("my_first_generated_pdf_file", $headers, $data);
+// $pdfGenerator = new PDFGenerator();
+// $pdfGenerator -> generate("my_first_generated_pdf_file", $headers, $data);
+
+$excelGenerator = new ExcelGenerator();
+$excelGenerator -> generate("my_first_generated_excel_file", $headers, $data);
