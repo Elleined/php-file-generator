@@ -9,6 +9,9 @@ class PDFGenerator implements Generator {
      * @overrides
      */
     public function generate(string $fileName, array $data): void {
+    }
+
+    public function codeSample(string $fileName): void {
         $fpdf = new FPDF();
 
         // Document Details
