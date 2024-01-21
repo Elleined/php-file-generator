@@ -2,5 +2,5 @@
 namespace Elleined\PHPFileGenerator;
 
 interface Generator {
-    public function generate(): void;
+    public function generate(String $fileName, array $data): void;
 }
