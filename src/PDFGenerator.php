@@ -8,7 +8,38 @@ class PDFGenerator implements Generator {
     /**
      * @overrides
      */
-    public function generate(string $fileName, array $data): void {
+    public function generate(string $fileName, array $headers, array $data): void {
+        $fpdf = new FPDF();
+
+        // Document Details
+        $fpdf -> SetAuthor("Denielle Mar M. De Guzman (Elleined)", true);
+        $fpdf -> SetCreator("PHP File Generator Project of Elleined", true);
+        $fpdf -> SetSubject("Generating PDF file using PHP", true);
+        $fpdf -> SetTitle("Creating sample PDF file.", true);
+        $fpdf -> SetKeywords("PHP PDF", true);
+
+        // Document Properties
+        $fpdf -> SetFont("Courier");
+        $fpdf -> SetFontSize(10);
+
+        // Document Page Properties
+        $fpdf -> AddPage();
+        $fpdf -> SetLeftMargin(14);
+
+        foreach ($headers as $header) {
+            $fpdf -> Cell(45, 6, $header, 1, 0, "C");
+        }
+        $fpdf -> Ln();
+
+
+        foreach ($data as $row) {
+            foreach ($row as $col) {
+                $fpdf -> Cell(45, 6, $col, 1, 0, "L");
+            }
+            $fpdf -> Ln();
+        }
+
+        $fpdf -> Output("", "$fileName.pdf", true);
     }
 
     public function codeSample(string $fileName): void {
