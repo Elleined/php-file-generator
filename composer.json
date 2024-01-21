@@ -12,5 +12,7 @@
             "email": "demadegu@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "setasign/fpdf": "^1.8"
+    }
 }
