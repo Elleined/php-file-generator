@@ -18,4 +18,4 @@ $data = [
 // $csvGenerator -> generate("my_first_generated_csv_file", $data);
 
 $pdfGenerator = new PDFGenerator();
-$pdfGenerator -> generate("my_first_generated_pdf_file", $data);
+$pdfGenerator -> generate("my_first_generated_pdf_file", $data)

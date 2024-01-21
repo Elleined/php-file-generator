@@ -23,14 +23,13 @@ class PDFGenerator implements Generator {
 
         // Document Properties
         $fpdf -> SetTextColor(255, 0, 0); // Sets the cell text colors
-        $fpdf -> SetFillColor(255, 255, 0);
+        $fpdf -> SetFillColor(255, 255, 0); // Sets the cell background color when cell fill parameter is true
         $fpdf -> SetFont("Courier");
         $fpdf -> SetFontSize("20");
 
-        // Document Margins
-        $fpdf -> SetMargins(10, 10, 10);
-
+        // Document Page Properties
         $fpdf -> AddPage();
+        $fpdf -> SetMargins(10, 10, 10);
 
         /**
          * Cell Documentation
